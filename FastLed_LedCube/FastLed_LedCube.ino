@@ -27,9 +27,25 @@ void setup() {
 
 void loop()
 {
+  
+}
+
+void monoColorBlue(){
   for(int x = 0; x < NUM_STRIPS; x++) {
     for(int i = 0; i < NUM_LEDS_PER_STRIP; i++) {
       leds[x][i] = CRGB::Blue;
+      FastLED.show();
+      leds[x][i] = CRGB::Black;
+      delay(DELAY);
+    }
+  }
+}
+
+
+void monoColorGreen(){
+  for(int x = 0; x < NUM_STRIPS; x++) {
+    for(int i = 0; i < NUM_LEDS_PER_STRIP; i++) {
+      leds[x][i] = CRGB::Green;
       FastLED.show();
       leds[x][i] = CRGB::Black;
       delay(DELAY);
